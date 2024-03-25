@@ -1,8 +1,10 @@
 from django.db import models
 from django.core.validators import RegexValidator
+from .services import get_path_upload_photo
 
+# Create your models here.
 check_number = RegexValidator(regex=r'^\+\d{11}$',
-                              message="Номер телефона должен быть введён в следующем формате: '+7111222333' 11 цифр.")
+                              message="Введите номер телефона в корректном формате: +7(111)222-333 (11 цифр)")
 
 
 class MyUser(models.Model):
@@ -77,11 +79,8 @@ class Images(models.Model):
     title = models.CharField(max_length=255)
     data = models.ImageField(upload_to=get_path_upload_photo, null=True)
     date_added = models.DateTimeField(auto_now_add=True)
+    pereval = models.ForeignKey(Pereval, on_delete=models.CASCADE, related_name='images')
 
-
-pereval = models.ForeignKey(Pereval, on_delete=models.CASCADE, related_name='images')
-
-
-class Meta:
-    verbose_name = "Изображение"
-    verbose_name_plural = "Изображения"
+    class Meta:
+        verbose_name = "Изображение"
+        verbose_name_plural = "Изображения"

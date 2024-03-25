@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddf7db7b-b099-40f1-8b0d-fc4099b22903" name="Changes" comment="1st commit">
-      <change afterPath="$PROJECT_DIR$/PerevalAPI/pereval/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="ddf7db7b-b099-40f1-8b0d-fc4099b22903" name="Changes" comment="Подключили БД к проекту, вынесли в переменное&#10;окружение данные">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PerevalAPI/PerevalAPI/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerevalAPI/PerevalAPI/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PerevalAPI/PerevalAPI/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerevalAPI/PerevalAPI/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PerevalAPI/pereval/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerevalAPI/pereval/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PerevalAPI/pereval/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerevalAPI/pereval/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PerevalAPI/pereval/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerevalAPI/pereval/views.py" afterDir="false" />
     </list>
@@ -37,13 +36,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="pythonProject" />
@@ -126,11 +126,20 @@
       <option name="project" value="LOCAL" />
       <updated>1711396167605</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Подключили БД к проекту, вынесли в переменное&#10;окружение данные">
+      <option name="closed" value="true" />
+      <created>1711403128030</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1711403128030</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1st commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="1st commit" />
+    <MESSAGE value="Подключили БД к проекту, вынесли в переменное&#10;окружение данные" />
+    <option name="LAST_COMMIT_MESSAGE" value="Подключили БД к проекту, вынесли в переменное&#10;окружение данные" />
   </component>
 </project>

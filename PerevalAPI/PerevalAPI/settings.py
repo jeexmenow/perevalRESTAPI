@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+import psycopg2
 load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -24,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv('DEBUG')
 
 ALLOWED_HOSTS = []
 
@@ -82,8 +83,8 @@ DATABASES = {
         'NAME': os.getenv('DBNAME'),
         'USER': os.getenv('DBUSER'),
         'PASSWORD': os.getenv('DBPASSWORD'),
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'HOST': os.getenv('DBHOST'),
+        'PORT': os.getenv('DBPORT'),
     }
 }
 
