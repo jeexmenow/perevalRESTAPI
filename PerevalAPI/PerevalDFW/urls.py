@@ -17,10 +17,10 @@ Including another URLconf
 from django.urls import include, path
 from django.contrib import admin
 from rest_framework import routers
-#from PerevalAPI.pereval import views
+from pereval import views
 
 router = routers.DefaultRouter()
-#router.register(r'perevals', views.PerevalViewset, basename='perevals')
+router.register(r'perevals', views.PerevalViewset, basename='perevals')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
