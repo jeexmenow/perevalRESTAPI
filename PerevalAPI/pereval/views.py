@@ -6,7 +6,6 @@ from rest_framework import status
 from .serializers import *
 
 
-# Create your views here.
 class UserViewset(viewsets.ModelViewSet):
     queryset = MyUser.objects.all()
     serializer_class = UserSerializer

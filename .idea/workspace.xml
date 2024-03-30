@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddf7db7b-b099-40f1-8b0d-fc4099b22903" name="Changes" comment="- Появилась ошибка декодинга, решаю">
+    <list default="true" id="ddf7db7b-b099-40f1-8b0d-fc4099b22903" name="Changes" comment="fix import">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerevalAPI/PerevalAPI/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerevalAPI/PerevalDFW/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerevalAPI/PerevalAPI/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerevalAPI/PerevalDFW/asgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerevalAPI/PerevalAPI/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerevalAPI/PerevalDFW/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerevalAPI/PerevalAPI/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerevalAPI/PerevalDFW/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerevalAPI/PerevalAPI/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerevalAPI/PerevalDFW/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerevalAPI/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerevalAPI/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PerevalAPI/PerevalDFW/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerevalAPI/PerevalDFW/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PerevalAPI/pereval/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerevalAPI/pereval/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PerevalAPI/pereval/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerevalAPI/pereval/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PerevalAPI/pereval/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerevalAPI/pereval/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,14 +35,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="pythonProject" />
@@ -143,13 +141,30 @@
       <option name="project" value="LOCAL" />
       <updated>1711404903214</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="- Появилась ошибка декодинга, решаю">
+      <option name="closed" value="true" />
+      <created>1711405371915</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1711405371915</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fix import">
+      <option name="closed" value="true" />
+      <created>1711405465101</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1711405465101</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1st commit" />
     <MESSAGE value="Подключили БД к проекту, вынесли в переменное&#10;окружение данные" />
     <MESSAGE value="- Появилась ошибка декодинга, решаю" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Появилась ошибка декодинга, решаю" />
+    <MESSAGE value="fix import" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix import" />
   </component>
 </project>
