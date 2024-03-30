@@ -64,3 +64,4 @@ class PerevalSerializer(serializers.ModelSerializer):
             Images.objects.create(data=data, pereval=pereval, title=title)
 
         return pereval
+
