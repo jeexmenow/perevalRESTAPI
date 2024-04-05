@@ -1,4 +1,6 @@
-from rest_framework import viewsets
+from django.http import JsonResponse
+from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework import viewsets, generics
 from rest_framework.response import Response
 from rest_framework.decorators import action
 from rest_framework import status
@@ -9,6 +11,20 @@ from .serializers import *
 class UserViewset(viewsets.ModelViewSet):
     queryset = MyUser.objects.all()
     serializer_class = UserSerializer
+
+
+class EmailApiView(generics.ListAPIView):
+    # queryset = Users.objects.all()
+    serializer_class = PerevalSerializer
+
+    def get(self, request, *args, **kwargs):
+        email = kwargs.get('email', None)
+        user_exist = Pereval.objects.filter(user_id__email=email)
+        if user_exist:
+            data = PerevalSerializer(user_exist, many=True).data
+        else:
+            data = {'message': f'there is no user with email: {email}'}
+        return JsonResponse(data, safe=False)
 
 
 class CoordsViewset(viewsets.ModelViewSet):
@@ -29,7 +45,9 @@ class ImageViewset(viewsets.ModelViewSet):
 class PerevalViewset(viewsets.ModelViewSet):
     queryset = Pereval.objects.all()
     serializer_class = PerevalSerializer
+    filter_backends = [DjangoFilterBackend]
 
+    # CREATING pereval object
     @action(detail=False, methods=['post'])
     def submitData(self, request):
         data = request.data
