@@ -6,4 +6,3 @@ admin.site.register(Pereval)
 admin.site.register(Coord)
 admin.site.register(Level)
 admin.site.register(Images)
-
