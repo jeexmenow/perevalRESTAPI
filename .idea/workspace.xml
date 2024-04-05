@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddf7db7b-b099-40f1-8b0d-fc4099b22903" name="Changes" comment="fix import">
+    <list default="true" id="ddf7db7b-b099-40f1-8b0d-fc4099b22903" name="Changes" comment="finish">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PerevalAPI/PerevalDFW/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerevalAPI/PerevalDFW/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PerevalAPI/PerevalDFW/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerevalAPI/PerevalDFW/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PerevalAPI/pereval/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerevalAPI/pereval/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PerevalAPI/pereval/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerevalAPI/pereval/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PerevalAPI/pereval/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerevalAPI/pereval/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PerevalAPI/pereval/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerevalAPI/pereval/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,6 +28,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;jeexmenow&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/jeexmenow/perevalRESTAPI.git&quot;,
+    &quot;accountId&quot;: &quot;260848ce-3983-4b72-80e3-26e41bf8d348&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -40,9 +54,16 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PycharmProjects\RESTAPI_perevals\PerevalAPI" />
+      <recent name="D:\PycharmProjects\RESTAPI_perevals\PerevalAPI\PerevalDFW" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="pythonProject" />
@@ -104,7 +125,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-09665e90c3a7-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.15026.15" />
+        <option value="bundled-python-sdk-0509580d9d50-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.14494.241" />
       </set>
     </attachedChunks>
   </component>
@@ -157,7 +178,31 @@
       <option name="project" value="LOCAL" />
       <updated>1711405465101</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="добавила сериалайзеры">
+      <option name="closed" value="true" />
+      <created>1711820289450</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1711820289450</updated>
+    </task>
+    <task id="LOCAL-00007" summary="P.S. Ошибка декодинга исправлена">
+      <option name="closed" value="true" />
+      <created>1711820363836</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1711820363836</updated>
+    </task>
+    <task id="LOCAL-00008" summary="finish">
+      <option name="closed" value="true" />
+      <created>1711820445193</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1711820445193</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -165,6 +210,9 @@
     <MESSAGE value="Подключили БД к проекту, вынесли в переменное&#10;окружение данные" />
     <MESSAGE value="- Появилась ошибка декодинга, решаю" />
     <MESSAGE value="fix import" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix import" />
+    <MESSAGE value="добавила сериалайзеры" />
+    <MESSAGE value="P.S. Ошибка декодинга исправлена" />
+    <MESSAGE value="finish" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish" />
   </component>
 </project>
