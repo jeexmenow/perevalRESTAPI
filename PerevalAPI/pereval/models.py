@@ -28,24 +28,37 @@ class Coord(models.Model):
     longitude = models.DecimalField(decimal_places=8, max_digits=10)
     height = models.IntegerField(default=0)
 
+    def __str__(self):
+        return str(self.height)
+
     class Meta:
         verbose_name = "Координаты"
         verbose_name_plural = "Координаты"
 
 
 class Level(models.Model):
-    CHOICE_LEVEL = (
-        (' ', ' '),
+    LEVEL_1 = '1A'
+    LEVEL_2 = '1B'
+    LEVEL_3 = '2A'
+    LEVEL_4 = '2B'
+    LEVEL_5 = '3A'
+    LEVEL_6 = '3B'
+    LEVEL_CHOICES = (
         ('1A', '1A'),
+        ('1B', '1B'),
         ('2A', '2A'),
+        ('2B', '2B'),
         ('3A', '3A'),
-        ('4A', '4A'),
+        ('3B', '3B')
     )
 
-    winter = models.CharField(max_length=2, choices=CHOICE_LEVEL, default=" ")
-    summer = models.CharField(max_length=2, choices=CHOICE_LEVEL, default=" ")
-    autumn = models.CharField(max_length=2, choices=CHOICE_LEVEL, default=" ")
-    spring = models.CharField(max_length=2, choices=CHOICE_LEVEL, default=" ")
+    winter = models.CharField(max_length=2, choices=LEVEL_CHOICES, default=LEVEL_1)
+    summer = models.CharField(max_length=2, choices=LEVEL_CHOICES, default=LEVEL_1)
+    autumn = models.CharField(max_length=2, choices=LEVEL_CHOICES, default=LEVEL_1)
+    spring = models.CharField(max_length=2, choices=LEVEL_CHOICES, default=LEVEL_1)
+
+    def __str__(self):
+        return f' winter: {self.winter}, summer: {self.summer}, autumn: {self.autumn}, spring: {self.spring}'
 
     class Meta:
         verbose_name = "Уровень сложности"
@@ -69,6 +82,9 @@ class Pereval(models.Model):
     user = models.ForeignKey(MyUser, on_delete=models.CASCADE, related_name='user')
     coords = models.OneToOneField(Coord, on_delete=models.CASCADE)
     level = models.ForeignKey(Level, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f'{self.pk}:  {self.beauty_title}'
 
     class Meta:
         verbose_name = "Перевал"
