@@ -83,33 +83,3 @@
             GET /api/submitData/user__email=<str:email> - позволяет получить данные всех объектов, отправленных на сервер пользователем с почтой <***str:email***>.
             Фильтрация по адресу электронной почты реализуется с помощью пакета ***django-filter***.
 При разработке проекта все требования и задачи были учтены и успешно выполнены.
-
-About
-Спринт№1 от SkillFactory
-
-Resources
- Readme
- Activity
-Stars
- 0 stars
-Watchers
- 1 watching
-Forks
- 0 forks
-Releases
-No releases published
-Create a new release
-Packages
-No packages published
-Publish your first package
-Footer
-© 2024 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact
-Manage cookies
-Do not share my personal information
