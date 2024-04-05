@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddf7db7b-b099-40f1-8b0d-fc4099b22903" name="Changes" comment="finish">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerevalAPI/PerevalDFW/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerevalAPI/PerevalDFW/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerevalAPI/PerevalDFW/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerevalAPI/PerevalDFW/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerevalAPI/pereval/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerevalAPI/pereval/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerevalAPI/pereval/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerevalAPI/pereval/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerevalAPI/pereval/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerevalAPI/pereval/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerevalAPI/pereval/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerevalAPI/pereval/views.py" afterDir="false" />
+    <list default="true" id="ddf7db7b-b099-40f1-8b0d-fc4099b22903" name="Changes" comment="Решена ошибка декодинга">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PerevalAPI/pereval/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PerevalAPI/pereval/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerevalAPI/pereval/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PerevalAPI/pereval/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PerevalAPI/pereval/migrations/__init__.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,15 +49,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Merging master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/PycharmProjects/RESTAPI_perevals",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\PycharmProjects\RESTAPI_perevals\PerevalAPI" />
@@ -202,7 +203,79 @@
       <option name="project" value="LOCAL" />
       <updated>1711820445193</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Методы. GET /submitData/&lt;id&gt; и PATCH/submitData/&lt;id&gt;">
+      <option name="closed" value="true" />
+      <created>1712354951621</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1712354951621</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Добавила DRF Spectacular">
+      <option name="closed" value="true" />
+      <created>1712355049862</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1712355049862</updated>
+    </task>
+    <task id="LOCAL-00011" summary="1">
+      <option name="closed" value="true" />
+      <created>1712355081010</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1712355081010</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Views. Исправлено creating pereval object">
+      <option name="closed" value="true" />
+      <created>1712355326180</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1712355326180</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Модели. Добавлены значения в переменные (winter, summer etc)">
+      <option name="closed" value="true" />
+      <created>1712355504138</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1712355504138</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Покрыла код тестами">
+      <option name="closed" value="true" />
+      <created>1712355548952</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1712355548952</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Попытка сделать документацию с помощью Swagger">
+      <option name="closed" value="true" />
+      <created>1712355644622</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1712355644622</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Попытка сделать документацию с помощью Swagger">
+      <option name="closed" value="true" />
+      <created>1712355655465</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1712355655465</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Решена ошибка декодинга">
+      <option name="closed" value="true" />
+      <created>1712355700950</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1712355700950</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -213,6 +286,14 @@
     <MESSAGE value="добавила сериалайзеры" />
     <MESSAGE value="P.S. Ошибка декодинга исправлена" />
     <MESSAGE value="finish" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish" />
+    <MESSAGE value="Методы. GET /submitData/&lt;id&gt; и PATCH/submitData/&lt;id&gt;" />
+    <MESSAGE value="Добавила DRF Spectacular" />
+    <MESSAGE value="1" />
+    <MESSAGE value="Views. Исправлено creating pereval object" />
+    <MESSAGE value="Модели. Добавлены значения в переменные (winter, summer etc)" />
+    <MESSAGE value="Покрыла код тестами" />
+    <MESSAGE value="Попытка сделать документацию с помощью Swagger" />
+    <MESSAGE value="Решена ошибка декодинга" />
+    <option name="LAST_COMMIT_MESSAGE" value="Решена ошибка декодинга" />
   </component>
 </project>
