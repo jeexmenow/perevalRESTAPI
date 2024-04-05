@@ -1,0 +1,567 @@
+openapi: 3.0.3
+info:
+  title: Django DRF Pereval
+  version: 0.0.0
+paths:
+  /submitData/pereval/:
+    get:
+      operationId: pereval_list
+      tags:
+      - pereval
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Pereval'
+          description: ''
+    post:
+      operationId: pereval_create
+      tags:
+      - pereval
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Pereval'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Pereval'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Pereval'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Pereval'
+          description: ''
+  /submitData/pereval/{id}/:
+    get:
+      operationId: pereval_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this pereval add.
+        required: true
+      tags:
+      - pereval
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Pereval'
+          description: ''
+    put:
+      operationId: pereval_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this pereval add.
+        required: true
+      tags:
+      - pereval
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Pereval'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Pereval'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Pereval'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Pereval'
+          description: ''
+    patch:
+      operationId: pereval_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this pereval add.
+        required: true
+      tags:
+      - pereval
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedPereval'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedPereval'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedPereval'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Pereval'
+          description: ''
+    delete:
+      operationId: pereval_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this pereval add.
+        required: true
+      tags:
+      - pereval
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /submitData/schema/:
+    get:
+      operationId: schema_retrieve
+      description: |-
+        OpenApi3 schema for this API. Format can be selected via content negotiation.
+
+        - YAML: application/vnd.oai.openapi
+        - JSON: application/vnd.oai.openapi+json
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - json
+          - yaml
+      - in: query
+        name: lang
+        schema:
+          type: string
+          enum:
+          - af
+          - ar
+          - ar-dz
+          - ast
+          - az
+          - be
+          - bg
+          - bn
+          - br
+          - bs
+          - ca
+          - ckb
+          - cs
+          - cy
+          - da
+          - de
+          - dsb
+          - el
+          - en
+          - en-au
+          - en-gb
+          - eo
+          - es
+          - es-ar
+          - es-co
+          - es-mx
+          - es-ni
+          - es-ve
+          - et
+          - eu
+          - fa
+          - fi
+          - fr
+          - fy
+          - ga
+          - gd
+          - gl
+          - he
+          - hi
+          - hr
+          - hsb
+          - hu
+          - hy
+          - ia
+          - id
+          - ig
+          - io
+          - is
+          - it
+          - ja
+          - ka
+          - kab
+          - kk
+          - km
+          - kn
+          - ko
+          - ky
+          - lb
+          - lt
+          - lv
+          - mk
+          - ml
+          - mn
+          - mr
+          - ms
+          - my
+          - nb
+          - ne
+          - nl
+          - nn
+          - os
+          - pa
+          - pl
+          - pt
+          - pt-br
+          - ro
+          - ru
+          - sk
+          - sl
+          - sq
+          - sr
+          - sr-latn
+          - sv
+          - sw
+          - ta
+          - te
+          - tg
+          - th
+          - tk
+          - tr
+          - tt
+          - udm
+          - uk
+          - ur
+          - uz
+          - vi
+          - zh-hans
+          - zh-hant
+      tags:
+      - schema
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/vnd.oai.openapi:
+              schema:
+                type: object
+                additionalProperties: {}
+            application/yaml:
+              schema:
+                type: object
+                additionalProperties: {}
+            application/vnd.oai.openapi+json:
+              schema:
+                type: object
+                additionalProperties: {}
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+          description: ''
+  /submitData/user__email={email}:
+    get:
+      operationId: user__email=_list
+      parameters:
+      - in: path
+        name: email
+        schema:
+          type: string
+        required: true
+      tags:
+      - user__email=
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Pereval'
+          description: ''
+components:
+  schemas:
+    AutumnEnum:
+      enum:
+      - 1A
+      - 1B
+      - 2A
+      - 2B
+      - 3A
+      - 3B
+      type: string
+      description: |-
+        * `1A` - 1A
+        * `1B` - 1B
+        * `2A` - 2A
+        * `2B` - 2B
+        * `3A` - 3A
+        * `3B` - 3B
+    Coord:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        latitude:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,2}(?:\.\d{0,8})?$
+        longitude:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,2}(?:\.\d{0,8})?$
+        height:
+          type: integer
+      required:
+      - height
+      - id
+      - latitude
+      - longitude
+    Image:
+      type: object
+      properties:
+        data:
+          type: string
+          format: uri
+        title:
+          type: string
+          maxLength: 255
+      required:
+      - data
+      - title
+    Level:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        winter:
+          $ref: '#/components/schemas/WinterEnum'
+        summer:
+          $ref: '#/components/schemas/SummerEnum'
+        autumn:
+          $ref: '#/components/schemas/AutumnEnum'
+        spring:
+          $ref: '#/components/schemas/SpringEnum'
+      required:
+      - id
+    PatchedPereval:
+      type: object
+      description: Adds nested create feature
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        user_id:
+          $ref: '#/components/schemas/Users'
+        coords_id:
+          $ref: '#/components/schemas/Coord'
+        level_diff:
+          allOf:
+          - $ref: '#/components/schemas/Level'
+          nullable: true
+        beauty_title:
+          type: string
+          maxLength: 255
+        title:
+          type: string
+          maxLength: 255
+        other_titles:
+          type: string
+          maxLength: 255
+        connect:
+          type: string
+          maxLength: 255
+        add_time:
+          type: string
+          format: date-time
+          readOnly: true
+        image:
+          type: array
+          items:
+            $ref: '#/components/schemas/Image'
+        status:
+          $ref: '#/components/schemas/StatusEnum'
+    Pereval:
+      type: object
+      description: Adds nested create feature
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        user_id:
+          $ref: '#/components/schemas/Users'
+        coords_id:
+          $ref: '#/components/schemas/Coord'
+        level_diff:
+          allOf:
+          - $ref: '#/components/schemas/Level'
+          nullable: true
+        beauty_title:
+          type: string
+          maxLength: 255
+        title:
+          type: string
+          maxLength: 255
+        other_titles:
+          type: string
+          maxLength: 255
+        connect:
+          type: string
+          maxLength: 255
+        add_time:
+          type: string
+          format: date-time
+          readOnly: true
+        image:
+          type: array
+          items:
+            $ref: '#/components/schemas/Image'
+        status:
+          $ref: '#/components/schemas/StatusEnum'
+      required:
+      - add_time
+      - beauty_title
+      - connect
+      - coords_id
+      - id
+      - image
+      - level_diff
+      - other_titles
+      - title
+      - user_id
+    SpringEnum:
+      enum:
+      - 1A
+      - 1B
+      - 2A
+      - 2B
+      - 3A
+      - 3B
+      type: string
+      description: |-
+        * `1A` - 1A
+        * `1B` - 1B
+        * `2A` - 2A
+        * `2B` - 2B
+        * `3A` - 3A
+        * `3B` - 3B
+    StatusEnum:
+      enum:
+      - new
+      - pending
+      - accepted
+      - rejected
+      type: string
+      description: |-
+        * `new` - new
+        * `pending` - is being done
+        * `accepted` - successfully moderated
+        * `rejected` - was moderated but was not accepted
+    SummerEnum:
+      enum:
+      - 1A
+      - 1B
+      - 2A
+      - 2B
+      - 3A
+      - 3B
+      type: string
+      description: |-
+        * `1A` - 1A
+        * `1B` - 1B
+        * `2A` - 2A
+        * `2B` - 2B
+        * `3A` - 3A
+        * `3B` - 3B
+    Users:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        email:
+          type: string
+          format: email
+          maxLength: 50
+        full_name:
+          type: string
+          maxLength: 255
+        phone:
+          type: integer
+      required:
+      - email
+      - full_name
+      - id
+      - phone
+    WinterEnum:
+      enum:
+      - 1A
+      - 1B
+      - 2A
+      - 2B
+      - 3A
+      - 3B
+      type: string
+      description: |-
+        * `1A` - 1A
+        * `1B` - 1B
+        * `2A` - 2A
+        * `2B` - 2B
+        * `3A` - 3A
+        * `3B` - 3B
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: sessionid
